@@ -5,5 +5,4 @@ class Solution:
         for i in range(1,len(groups)):
             if groups[i-1]!=groups[i]:
                 res.append(words[i])
-        print(res)
         return res
