@@ -3,3 +3,4 @@ class Solution:
         count1=Counter(s)
         count2=Counter(t)
         return count1==count2
+        
