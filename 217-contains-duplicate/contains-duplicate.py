@@ -4,9 +4,12 @@ class Solution:
         # if len(nums)!=len(setn):
         #     return True
         # return False
-        count=Counter(nums)
-        print(count)
-        for i in count:
-            if(count[i]>1):
+
+
+        # 
+        
+        nums=sorted(nums)
+        for i in range(1,len(nums)):
+            if nums[i-1]==nums[i]:
                 return True
         return False
