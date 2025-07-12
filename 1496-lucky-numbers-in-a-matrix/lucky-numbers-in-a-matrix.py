@@ -6,8 +6,8 @@ class Solution:
         column=[[] for _ in range (len(matrix[0]))]
         if (len(matrix) or len(matrix[0]))==0:
             return []
-        for i in range(len(matrix)):        # rows
-            for j in range(len(matrix[0])): # columns
+        for i in range(len(matrix)):        
+            for j in range(len(matrix[0])): 
                 column[j].append(matrix[i][j])
         colmax=[]
         for i in range(len(column)):
