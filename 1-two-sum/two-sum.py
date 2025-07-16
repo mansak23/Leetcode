@@ -9,8 +9,10 @@ class Solution:
         #             return res
         # return res
         m={}#dictionary to store index
-        for i,num in enumerate(nums):
-            com=target-num
-            if com in m:
-                return [m[com],i]
-            m[num]=i
+        res=[]
+        for i in range(len(nums)):
+            diff=target-nums[i]
+            if diff in m:
+                res=[m[diff],i]
+            m[nums[i]]=i
+        return res
