@@ -10,6 +10,7 @@ class Solution:
         #     if -mx in nums:
         #         return mx
         # return -1
+        nums=set(nums)
         nums=sorted(nums)
         print(nums)
         for i in nums:
