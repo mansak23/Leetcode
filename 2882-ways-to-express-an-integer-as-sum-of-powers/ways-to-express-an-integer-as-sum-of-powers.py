@@ -2,10 +2,7 @@ class Solution:
     def numberOfWays(self, n: int, x: int) -> int:
         cnt=0
         num=floor(n/(1/x))
-        res=[]
-        for i in range(1,num+1):
-            res.append(i**x)
-        print(res)
+        res=[i**x for i in range(1,num+1)]
         dp=[0]*(n+1)
         dp[0]=1
         for i in res:
