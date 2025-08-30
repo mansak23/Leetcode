@@ -8,7 +8,4 @@ class Solution:
                 if (i+1 <len(matrix)) and (j+1 < len(matrix[0])):
                     if matrix[i+1][j+1] not in m:
                         return False
-                    else:
-                        m.add(matrix[i+1][j+1])
-                print(m)
         return True
