@@ -1,6 +1,6 @@
 class Solution:
     def sortVowels(self, s: str) -> str:
-        vwl=['a','e','i','o','u','A','E','I','O','U']
+        vwl="aeiouAEIOU"
         srt=[i for i in s if i in vwl]
         srt.sort()
         res=""
