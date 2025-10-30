@@ -5,7 +5,6 @@ class Solution:
         setbit=[3]
         while(setbit[-1]<=1000):
             setbit.append(setbit[-1]*2+1)
-        print(setbit)
         for i in setbit:
             if i >= n:
                 return i
