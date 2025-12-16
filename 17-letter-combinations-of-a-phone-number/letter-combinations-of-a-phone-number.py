@@ -14,29 +14,15 @@ class Solution:
             '9': "wxyz"
         }
 
-        if len(digits) == 1:
-            return list(phone[digits[0]])
+        def backtrack(idx, comb):
+            if idx == len(digits):
+                res.append(comb[:])
+                return
+            
+            for l in phone[digits[idx]]:
+                backtrack(idx + 1, comb + l)
 
-        if len(digits) == 2:
-            res = []
-            for a in phone[digits[0]]:
-                for b in phone[digits[1]]:
-                    res.append(a + b)
-            return res
-
-        if len(digits) == 3:
-            res = []
-            for a in phone[digits[0]]:
-                for b in phone[digits[1]]:
-                    for c in phone[digits[2]]:
-                        res.append(a + b + c)
-            return res
-
-        # len == 4
         res = []
-        for a in phone[digits[0]]:
-            for b in phone[digits[1]]:
-                for c in phone[digits[2]]:
-                    for d in phone[digits[3]]:
-                        res.append(a + b + c + d)
+        backtrack(0, "")
+
         return res
